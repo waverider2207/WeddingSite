@@ -279,7 +279,3 @@ div.custom-body hr.subheader {
 /*To toggle the arrows*/
 h4.panel-title a:not(.collapsed) b.plus{display:none}
 h4.panel-title a.collapsed b.minus {display: none}
-
-h1 {
-    font-family: Edwardian, Pristina, Vivaldi, serif;
-}

@@ -26,7 +26,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'plan'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
@@ -34,7 +34,7 @@ class SiteController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout','plan'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -139,6 +139,26 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    
+    /**
+     * Displays info page.
+     *
+     * @return mixed
+     */
+    public function actionInfo()
+    {
+        return $this->render('info');
+    }
+    
+    /**
+     * Displays plan page.
+     *
+     * @return mixed
+     */
+    public function actionPlan()
+    {
+        return $this->render('plan');
     }
 
     /**
